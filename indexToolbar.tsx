@@ -481,7 +481,6 @@ function ElementFormatDropdown({
         onClick={() => {
           editor.dispatchCommand(FORMAT_ELEMENT_COMMAND, 'left');
         }}
-        title="Left Align"
         className="item">
         <i className="icon left-align" />
         <span className="text">Left Align</span>
@@ -490,7 +489,6 @@ function ElementFormatDropdown({
         onClick={() => {
           editor.dispatchCommand(FORMAT_ELEMENT_COMMAND, 'center');
         }}
-        title="Center Align"
         className="item">
         <i className="icon center-align" />
         <span className="text">Center Align</span>
@@ -499,7 +497,6 @@ function ElementFormatDropdown({
         onClick={() => {
           editor.dispatchCommand(FORMAT_ELEMENT_COMMAND, 'right');
         }}
-        title="Right Align"
         className="item">
         <i className="icon right-align" />
         <span className="text">Right Align</span>
@@ -508,7 +505,6 @@ function ElementFormatDropdown({
         onClick={() => {
           editor.dispatchCommand(FORMAT_ELEMENT_COMMAND, 'justify');
         }}
-        title="Justify Align"
         className="item">
         <i className="icon justify-align" />
         <span className="text">Justify Align</span>
