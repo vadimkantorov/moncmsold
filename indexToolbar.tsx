@@ -1159,10 +1159,9 @@ export default function ToolbarPlugin({
             aria-label="Clear all text formatting">
             <i className="icon clear" />
           </button>
-
           <Divider />
 
-          <DropDown
+          {/*<DropDown
             disabled={!isEditable}
             buttonClassName="toolbar-item spaced"
             buttonLabel=""
@@ -1212,8 +1211,8 @@ export default function ToolbarPlugin({
               <i className="icon clear" />
               <span className="text">Clear Formatting</span>
             </DropDownItem>
-          </DropDown>
-          <Divider />
+          </DropDown>*/}
+          
           <DropDown
             disabled={!isEditable}
             buttonClassName="toolbar-item spaced"
