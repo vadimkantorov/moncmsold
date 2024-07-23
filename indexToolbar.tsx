@@ -481,35 +481,40 @@ function ElementFormatDropdown({
         onClick={() => {
           editor.dispatchCommand(FORMAT_ELEMENT_COMMAND, 'left');
         }}
+        title="Left Align"
         className="item">
         <i className="icon left-align" />
-        <span className="text">Left Align</span>
+        {/*<span className="text">Left Align</span>*/}
       </DropDownItem>
       <DropDownItem
         onClick={() => {
           editor.dispatchCommand(FORMAT_ELEMENT_COMMAND, 'center');
         }}
+        title="Center Align"
         className="item">
         <i className="icon center-align" />
-        <span className="text">Center Align</span>
+        {/*<span className="text">Center Align</span>*/}
       </DropDownItem>
       <DropDownItem
         onClick={() => {
           editor.dispatchCommand(FORMAT_ELEMENT_COMMAND, 'right');
         }}
+        title="Right Align"
         className="item">
         <i className="icon right-align" />
-        <span className="text">Right Align</span>
+        {/*<span className="text">Right Align</span>*/}
       </DropDownItem>
       <DropDownItem
         onClick={() => {
           editor.dispatchCommand(FORMAT_ELEMENT_COMMAND, 'justify');
         }}
+        title="Justify Align"
         className="item">
         <i className="icon justify-align" />
-        <span className="text">Justify Align</span>
+        {/*<span className="text">Justify Align</span>*/}
       </DropDownItem>
-      <DropDownItem
+      
+      {/*<DropDownItem
         onClick={() => {
           editor.dispatchCommand(FORMAT_ELEMENT_COMMAND, 'start');
         }}
@@ -536,24 +541,7 @@ function ElementFormatDropdown({
           }`}
         />
         <span className="text">End Align</span>
-      </DropDownItem>
-      <Divider />
-      <DropDownItem
-        onClick={() => {
-          editor.dispatchCommand(OUTDENT_CONTENT_COMMAND, undefined);
-        }}
-        className="item">
-        <i className={'icon ' + (isRTL ? 'indent' : 'outdent')} />
-        <span className="text">Outdent</span>
-      </DropDownItem>
-      <DropDownItem
-        onClick={() => {
-          editor.dispatchCommand(INDENT_CONTENT_COMMAND, undefined);
-        }}
-        className="item">
-        <i className={'icon ' + (isRTL ? 'outdent' : 'indent')} />
-        <span className="text">Indent</span>
-      </DropDownItem>
+      </DropDownItem>*/}
     </DropDown>
   );
 }
@@ -1409,7 +1397,6 @@ export default function ToolbarPlugin({
         <div className="actions"><i className={!isEditable ? 'unlock' : 'lock'} /></div>
 
       </button>
-      <Divider />
 
       {modal}
     </div>
