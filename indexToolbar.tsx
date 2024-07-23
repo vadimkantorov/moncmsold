@@ -1080,6 +1080,7 @@ export default function ToolbarPlugin({
           </button>
 
           <button
+            disabled={!isEditable}
             onClick={() => {
               showModal('Insert Image', (onClose) => (
                 <InsertImageDialog
@@ -1091,7 +1092,7 @@ export default function ToolbarPlugin({
             className="toolbar-item spaced active"
             title="Insert image"
             type="button"
-            aria-label="Insert iamge block">
+            aria-label="Insert image block">
             <i className="icon image" />
           </button>
           <Divider />
@@ -1102,6 +1103,47 @@ export default function ToolbarPlugin({
             editor={editor}
             isRTL={isRTL}
           />
+      
+          <button
+            disabled={!isEditable}
+            onClick={formatCheckList}
+            className="toolbar-item"
+            title="Check List">
+            <i className="icon check-list" />
+          </button>
+          <button
+            disabled={!isEditable}
+            onClick={formatBulletList}
+            className="toolbar-item"
+            title="Bullet List">
+            <i className="icon bullet-list" />
+          </button>
+          <button
+            disabled={!isEditable}
+            onClick={formatNumberedList}
+            className="toolbar-item"
+            title="Numbered List">
+            <i className="icon numbered-list" />
+          </button>
+          <button
+            disabled={!isEditable}
+            onClick={() => {
+              editor.dispatchCommand(OUTDENT_CONTENT_COMMAND, undefined);
+            }}
+            className="toolbar-item"
+            title="Outdent">
+            <i className={'icon ' + (isRTL ? 'indent' : 'outdent')} />
+          </button>
+          <button
+            disabled={!isEditable}
+            onClick={() => {
+              editor.dispatchCommand(INDENT_CONTENT_COMMAND, undefined);
+            }}
+            className="toolbar-item"
+            title="Indent">
+            <i className={'icon ' + (isRTL ? 'outdent' : 'indent')} />
+          </button>
+
           <Divider />
 
           <DropDown
@@ -1332,8 +1374,6 @@ export default function ToolbarPlugin({
         title="Read-Only Mode"
         aria-label={`${!isEditable ? 'Unlock' : 'Lock'} read-only mode`}>
 
-        {/* <i style={{backgroundImage: isEditable ? `url("data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='16'%20fill='currentColor'%20class='bi%20bi-lock'%3e%3cpath%20d='M8%201a2%202%200%200%201%202%202v4H6V3a2%202%200%200%201%202-2zm3%206V3a3%203%200%200%200-6%200v4a2%202%200%200%200-2%202v5a2%202%200%200%200%202%202h6a2%202%200%200%200%202-2V9a2%202%200%200%200-2-2zM5%208h6a1%201%200%200%201%201%201v5a1%201%200%200%201-1%201H5a1%201%200%200%201-1-1V9a1%201%200%200%201%201-1z'/%3e%3c/svg%3e")` : `url("data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='16'%20fill='currentColor'%20class='bi%20bi-lock-fill'%3e%3cpath%20d='M8%201a2%202%200%200%201%202%202v4H6V3a2%202%200%200%201%202-2zm3%206V3a3%203%200%200%200-6%200v4a2%202%200%200%200-2%202v5a2%202%200%200%200%202%202h6a2%202%200%200%200%202-2V9a2%202%200%200%200-2-2z'/%3e%3c/svg%3e")` }} /> */}
-        
         <div className="actions"><i className={!isEditable ? 'unlock' : 'lock'} /></div>
 
       </button>
