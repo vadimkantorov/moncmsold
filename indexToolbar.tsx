@@ -1078,6 +1078,24 @@ export default function ToolbarPlugin({
             aria-label="Insert code block">
             <i className="format code" />
           </button>
+
+          <button
+            onClick={() => {
+              showModal('Insert Image', (onClose) => (
+                <InsertImageDialog
+                  activeEditor={activeEditor}
+                  onClose={onClose}
+                />
+              ));
+            }}
+            className="toolbar-item spaced active"
+            title="Insert image"
+            type="button"
+            aria-label="Insert iamge block">
+            <i className="icon image" />
+          </button>
+          <Divider />
+
           <DropDown
             disabled={!isEditable}
             buttonClassName="toolbar-item spaced"

@@ -167,3 +167,8 @@ Based on the broken release https://github.com/facebook/lexical/releases/tag/v0.
 - https://ramezanpour.net/post/2021/02/09/gdpr
 - https://wowthemes.net/we-are-gdpr-compliant-practical-guide/
 - https://littlebigtech.net/posts/hugo-gdpr-cookie-consent-banner/
+- https://blog.jakelee.co.uk/introducing-minimajake-for-jekyll/
+- https://codepen.io/heatherthedev/pen/ajYQWK
+- https://www.smashingmagazine.com/2021/07/dynamic-header-intersection-observer/
+- https://pspdfkit.com/blog/2021/practical-uses-of-object-urls/
+- https://blog.jakelee.co.uk/blog-v2-1-with-table-of-contents-and-anchor-links/
