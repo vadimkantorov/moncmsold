@@ -471,7 +471,7 @@ function ElementFormatDropdown({
   return (
     <DropDown
       disabled={disabled}
-      {/*buttonLabel={formatOption.name}*/}
+      buttonLabel={""/*formatOption.name*/}
       buttonIconClassName={`icon ${
         isRTL ? formatOption.iconRTL : formatOption.icon
       }`}
