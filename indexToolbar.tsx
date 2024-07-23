@@ -1318,6 +1318,22 @@ export default function ToolbarPlugin({
         editor={editor}
         isRTL={isRTL}
       />
+      <Divider />
+
+      <button
+        className={`action-button ${!isEditable ? 'unlock' : 'lock'}`}
+        onClick={() => {
+          // Send latest editor state to commenting validation server
+          //if (isEditable) {
+          //  sendEditorState(editor);
+          //}
+          editor.setEditable(!editor.isEditable());
+        }}
+        title="Read-Only Mode"
+        aria-label={`${!isEditable ? 'Unlock' : 'Lock'} read-only mode`}>
+        <i className={!isEditable ? 'unlock' : 'lock'} />
+      </button>
+      <Divider />
 
       {modal}
     </div>
