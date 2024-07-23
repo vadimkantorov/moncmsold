@@ -920,6 +920,30 @@ export default function ToolbarPlugin({
       root.selectEnd();
     });
   }, [editor, shouldPreserveNewLinesInMarkdown]);
+  
+  const formatBulletList = () => {
+    if (blockType !== 'bullet') {
+      editor.dispatchCommand(INSERT_UNORDERED_LIST_COMMAND, undefined);
+    } else {
+      formatParagraph();
+    }
+  };
+
+  const formatCheckList = () => {
+    if (blockType !== 'check') {
+      editor.dispatchCommand(INSERT_CHECK_LIST_COMMAND, undefined);
+    } else {
+      formatParagraph();
+    }
+  };
+
+  const formatNumberedList = () => {
+    if (blockType !== 'number') {
+      editor.dispatchCommand(INSERT_ORDERED_LIST_COMMAND, undefined);
+    } else {
+      formatParagraph();
+    }
+  };
 
   return (
     <div className="toolbar">
@@ -1142,6 +1166,14 @@ export default function ToolbarPlugin({
             className="toolbar-item"
             title="Indent">
             <i className={'icon ' + (isRTL ? 'outdent' : 'indent')} />
+          </button>
+          <button
+            disabled={!isEditable}
+            onClick={clearFormatting}
+            className="toolbar-item"
+            title="Clear text formatting"
+            aria-label="Clear all text formatting">
+            <i className="icon clear" />
           </button>
 
           <Divider />
