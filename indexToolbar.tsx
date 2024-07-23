@@ -1096,6 +1096,14 @@ export default function ToolbarPlugin({
           </button>
           <Divider />
 
+          <ElementFormatDropdown
+            disabled={!isEditable}
+            value={elementFormat}
+            editor={editor}
+            isRTL={isRTL}
+          />
+          <Divider />
+
           <DropDown
             disabled={!isEditable}
             buttonClassName="toolbar-item spaced"
@@ -1311,13 +1319,6 @@ export default function ToolbarPlugin({
           </DropDown>
         </>
       )}
-      <Divider />
-      <ElementFormatDropdown
-        disabled={!isEditable}
-        value={elementFormat}
-        editor={editor}
-        isRTL={isRTL}
-      />
       <Divider />
       <button
         className={`action-button ${!isEditable ? 'unlock' : 'lock'}`}
