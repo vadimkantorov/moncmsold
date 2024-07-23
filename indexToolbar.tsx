@@ -484,7 +484,7 @@ function ElementFormatDropdown({
         title="Left Align"
         className="item">
         <i className="icon left-align" />
-        {/*<span className="text">Left Align</span>*/}
+        <span className="text">Left Align</span>
       </DropDownItem>
       <DropDownItem
         onClick={() => {
@@ -493,7 +493,7 @@ function ElementFormatDropdown({
         title="Center Align"
         className="item">
         <i className="icon center-align" />
-        {/*<span className="text">Center Align</span>*/}
+        <span className="text">Center Align</span>
       </DropDownItem>
       <DropDownItem
         onClick={() => {
@@ -502,7 +502,7 @@ function ElementFormatDropdown({
         title="Right Align"
         className="item">
         <i className="icon right-align" />
-        {/*<span className="text">Right Align</span>*/}
+        <span className="text">Right Align</span>
       </DropDownItem>
       <DropDownItem
         onClick={() => {
@@ -511,7 +511,7 @@ function ElementFormatDropdown({
         title="Justify Align"
         className="item">
         <i className="icon justify-align" />
-        {/*<span className="text">Justify Align</span>*/}
+        <span className="text">Justify Align</span>
       </DropDownItem>
       
       {/*<DropDownItem
