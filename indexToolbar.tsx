@@ -1331,12 +1331,7 @@ export default function ToolbarPlugin({
         }}
         title="Read-Only Mode"
         aria-label={`${!isEditable ? 'Unlock' : 'Lock'} read-only mode`}>
-
-        <style>
-            i.lock { background-image: url("data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='16'%20fill='currentColor'%20class='bi%20bi-lock-fill'%3e%3cpath%20d='M8%201a2%202%200%200%201%202%202v4H6V3a2%202%200%200%201%202-2zm3%206V3a3%203%200%200%200-6%200v4a2%202%200%200%200-2%202v5a2%202%200%200%200%202%202h6a2%202%200%200%200%202-2V9a2%202%200%200%200-2-2z'/%3e%3c/svg%3e"); }
-            i.unlock { background-image: url("data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='16'%20fill='currentColor'%20class='bi%20bi-lock'%3e%3cpath%20d='M8%201a2%202%200%200%201%202%202v4H6V3a2%202%200%200%201%202-2zm3%206V3a3%203%200%200%200-6%200v4a2%202%200%200%200-2%202v5a2%202%200%200%200%202%202h6a2%202%200%200%200%202-2V9a2%202%200%200%200-2-2zM5%208h6a1%201%200%200%201%201%201v5a1%201%200%200%201-1%201H5a1%201%200%200%201-1-1V9a1%201%200%200%201%201-1z'/%3e%3c/svg%3e"); }
-        </style>
-        <i className={!isEditable ? 'unlock' : 'lock'} />
+        <i style={{backgroundImage: isEditable ? `url("data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='16'%20fill='currentColor'%20class='bi%20bi-lock'%3e%3cpath%20d='M8%201a2%202%200%200%201%202%202v4H6V3a2%202%200%200%201%202-2zm3%206V3a3%203%200%200%200-6%200v4a2%202%200%200%200-2%202v5a2%202%200%200%200%202%202h6a2%202%200%200%200%202-2V9a2%202%200%200%200-2-2zM5%208h6a1%201%200%200%201%201%201v5a1%201%200%200%201-1%201H5a1%201%200%200%201-1-1V9a1%201%200%200%201%201-1z'/%3e%3c/svg%3e")` : `url("data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='16'%20height='16'%20fill='currentColor'%20class='bi%20bi-lock-fill'%3e%3cpath%20d='M8%201a2%202%200%200%201%202%202v4H6V3a2%202%200%200%201%202-2zm3%206V3a3%203%200%200%200-6%200v4a2%202%200%200%200-2%202v5a2%202%200%200%200%202%202h6a2%202%200%200%200%202-2V9a2%202%200%200%200-2-2z'/%3e%3c/svg%3e")` }} />
       </button>
       <Divider />
 
